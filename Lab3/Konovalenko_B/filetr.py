@@ -48,7 +48,7 @@ def translate_file(config_path: str):
     max_words = config['limits'].get('max_words', 100)
     max_sentences = config['limits'].get('max_sentences', 100)
 
-    # Виводимо інформацію про текстовий файл
+    # Виводимо інформацію про текстовий файл якщо він існує
     if not os.path.exists(text_file):
         print(f"File '{text_file}' not found.")
         return

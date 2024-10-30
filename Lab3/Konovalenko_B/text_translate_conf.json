@@ -1,7 +1,7 @@
 {
     "text_file": "file_with_text.txt",
     "target_language": "en",
-    "output": "screen",
+    "output": "file",
     "limits": {
         "max_chars": 600,
         "max_words": 100,

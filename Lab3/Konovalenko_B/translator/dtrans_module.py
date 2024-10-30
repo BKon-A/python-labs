@@ -76,7 +76,7 @@ def LanguageList(out: str = 'screen', text: str = None, limit: int = 10) -> str:
                 except TranslationNotFound:
                     translated_text = "Translation failed"
 
-            table += f"{index:<3} {name:<15}    {code:<8}\t{translated_text}\n"
+            table += f"{index:<3} {name:<15} {code:<15}\t   {translated_text}\n"
             index += 1
 
         if out == 'screen':

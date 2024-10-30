@@ -11,7 +11,6 @@ def main():
     elif isinstance(lang, str):
         print(f"Detected Language: {lang}")
     else:
-        
         try:
             print(f"Detected Language: {lang.split(',')[0].split(': ')[1]}, Confidence: {lang.split(',')[1].split(': ')[1]}")
         except Exception as e:

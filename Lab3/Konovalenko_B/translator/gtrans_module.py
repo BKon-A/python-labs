@@ -43,13 +43,12 @@ def CodeLang(lang: str) -> str:
     # lang - назва мови або код мови
 
     try:
-        if lang in LANGUAGES:
-            return LANGUAGES[lang]
-        else:
-            for name, code in LANGUAGES.items():
-                if name.lower() == lang.lower():
-                    return code
-            return "Language not found."
+        for language in LANGUAGES:
+            name = language['name'].lower()
+            code = language['language']
+            if lang.lower() == name or lang.lower() == code:
+                return code if lang.lower() == name else name
+        return "Language not found."
     except Exception as e:
         return f"Error: {str(e)}"
 
